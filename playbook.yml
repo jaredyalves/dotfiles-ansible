@@ -6,4 +6,5 @@
     github_user: jaredyalves
 
   roles:
+    - scripts
     - neovim

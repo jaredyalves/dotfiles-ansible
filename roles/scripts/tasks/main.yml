@@ -1,0 +1,12 @@
+---
+- name: Make sure the binaries directory exists
+  ansible.builtin.file:
+    path: "/home/{{ user }}/.local/bin"
+    state: directory
+    mode: '0755'
+
+- name: Copy the background.sh file
+  ansible.builtin.copy:
+    src: "background.sh"
+    dest: "/home/{{ user }}/.local/bin"
+    mode: "0744"
