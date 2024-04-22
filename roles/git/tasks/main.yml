@@ -1,0 +1,10 @@
+---
+- name: Copy the .gitconfig file
+  ansible.builtin.template:
+    src: "gitconfig.j2"
+    dest: "/home/{{ user }}/.gitconfig"
+
+- name: Copy the .gitconfig-42 file
+  ansible.builtin.template:
+    src: "gitconfig-42.j2"
+    dest: "/home/{{ user }}/.gitconfig-42"

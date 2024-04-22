@@ -1,0 +1,11 @@
+[user]
+    name = {{ git_name }}
+    email = {{ git_email }}
+    signingkey = {{ git_email }}
+[commit]
+    gpgsign = true
+[init]
+    defaultBranch = main
+
+[includeIf "gitdir:~/projects/42/"]
+    path = ~/.gitconfig-42
