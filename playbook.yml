@@ -2,6 +2,6 @@
 - hosts: all
 
   roles:
-    - scripts
-    - neovim
     - git
+    - neovim
+    - scripts
