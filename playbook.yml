@@ -1,6 +1,5 @@
 ---
-- name: dotfiles playbook
-  hosts: all
+- hosts: all
   vars:
     user: user
     github_user: jaredyalves
