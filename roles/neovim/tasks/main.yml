@@ -1,0 +1,5 @@
+---
+- name: clone neovim config repo from github
+  ansible.builtin.git:
+    repo: "git@github.com:{{ github_user }}/nvim.git"
+    dest: "/home/{{ user }}/.config/nvim"
