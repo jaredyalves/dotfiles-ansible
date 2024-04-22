@@ -1,8 +1,5 @@
 ---
 - hosts: all
-  vars:
-    user: user
-    github_user: jaredyalves
 
   roles:
     - scripts
