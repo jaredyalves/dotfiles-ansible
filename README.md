@@ -16,7 +16,7 @@ pipx install ansible
 ## Usage
 
 ```bash
-ansible -i hosts playbook.yml
+ansible-playbook playbook.yml
 ```
 
 ## Contributing
