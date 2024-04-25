@@ -1,0 +1,2 @@
+---
+asdf_path: "/home/{{ user }}/.asdf"
