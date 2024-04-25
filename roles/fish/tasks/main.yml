@@ -1,25 +1,25 @@
 ---
 - name: Make sure the fish directory exists
   ansible.builtin.file:
-    path: "/home/{{ user }}/.config/fish"
-    state: directory
-    mode: '0755'
-
-- name: Make sure the fish functions directory exists
-  ansible.builtin.file:
-    path: "{{ fish_path }}/functions"
+    path: "{{ fish_path }}"
     state: directory
     mode: '0755'
 
 - name: Copy the config.fish file
   ansible.builtin.template:
     src: "config.fish.j2"
-    dest: "/home/{{ user }}/.config/fish/config.fish"
+    dest: "{{ fish_path }}/config.fish"
 
 - name: Copy the fish_plugins file
   ansible.builtin.template:
     src: "fish_plugins.j2"
     dest: "{{ fish_path }}/fish_plugins"
+
+- name: Make sure the fish functions directory exists
+  ansible.builtin.file:
+    path: "{{ fish_path }}/functions"
+    state: directory
+    mode: '0755'
 
 - name: Install fisher plugin manager
   ansible.builtin.get_url:
