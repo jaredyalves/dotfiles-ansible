@@ -1,0 +1,11 @@
+---
+- name: Make sure the fish directory exists
+  ansible.builtin.file:
+    path: "/home/{{ user }}/.config/fish"
+    state: directory
+    mode: '0755'
+
+- name: Copy the config.fish file
+  ansible.builtin.template:
+    src: "config.fish.j2"
+    dest: "/home/{{ user }}/.config/fish/config.fish"

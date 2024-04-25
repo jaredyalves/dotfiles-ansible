@@ -3,6 +3,7 @@
 
   roles:
     - asdf
+    - fish
     - git
     - neovim
     - scripts

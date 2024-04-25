@@ -3,3 +3,14 @@
   ansible.builtin.git:
     repo: "git@github.com:asdf-vm/asdf.git"
     dest: "{{ asdf_path }}"
+
+- name: Make sure the fish completions directory exists
+  ansible.builtin.file:
+    path: "{{ fish_path }}/completions"
+    state: directory
+    mode: '0755'
+
+- name: Symlink asdf.fish completion file
+  ansible.builtin.file:
+    src: "{{ asdf_path }}/completions/asdf.fish"
+    dest: "{{ fish_path }}/completions/asdf.fish"
