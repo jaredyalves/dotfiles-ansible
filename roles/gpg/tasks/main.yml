@@ -1,0 +1,14 @@
+---
+- name: Copy the gpg.conf file
+  ansible.builtin.copy:
+    src: gpg.conf
+    dest: ~/.gnupg/gpg.conf
+    mode: "600"
+
+- name: Copy the gpg-agent.conf file
+  ansible.builtin.copy:
+    src: gpg-agent.conf
+    dest: ~/.gnupg/gpg-agent.conf
+    mode: "600"
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
