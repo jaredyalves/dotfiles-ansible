@@ -3,3 +3,5 @@ git_name: "Járedy Alves"
 git_email: "jaredyalves@undefinedname.com"
 git_name_42: "jcapistr"
 git_email_42: "jcapistr@student.42porto.com"
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et

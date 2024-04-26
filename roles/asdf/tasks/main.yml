@@ -14,3 +14,5 @@
   ansible.builtin.file:
     src: "{{ asdf_path }}/completions/asdf.fish"
     dest: "{{ fish_path }}/completions/asdf.fish"
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et

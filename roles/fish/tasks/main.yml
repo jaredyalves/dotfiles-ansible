@@ -25,3 +25,5 @@
   ansible.builtin.get_url:
     url: "https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish"
     dest: "{{ fish_path }}/functions/fisher.fish"
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
