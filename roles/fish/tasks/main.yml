@@ -3,31 +3,31 @@
   ansible.builtin.file:
     path: ~/.config/fish
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: Copy the config.fish file
   ansible.builtin.template:
     src: config.fish.j2
     dest: ~/.config/fish/config.fish
-    mode: '0644'
+    mode: "0644"
 
 - name: Copy the fish_plugins file
   ansible.builtin.template:
     src: fish_plugins.j2
     dest: ~/.config/fish/fish_plugins
-    mode: '0644'
+    mode: "0644"
 
 - name: Make sure the fish/functions directory exists
   ansible.builtin.file:
     path: ~/.config/fish/functions
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: Install fisher plugin manager
   ansible.builtin.get_url:
     url: https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
     dest: ~/.config/fish/functions/fisher.fish
-    mode: '0644'
+    mode: "0644"
 
 - name: Copy the asdf repository from github
   ansible.builtin.git:
@@ -39,7 +39,7 @@
   ansible.builtin.file:
     path: ~/.config/fish/completions
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: Symlink asdf.fish completion file
   ansible.builtin.file:
