@@ -2,7 +2,6 @@
 - hosts: all
 
   roles:
-    - asdf
     - fish
     - git
     - gpg
