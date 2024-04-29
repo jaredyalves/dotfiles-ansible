@@ -1,35 +1,27 @@
 ---
-- name: Make sure the ssh directory exists
+- name: Make sure the directory exists
   ansible.builtin.file:
-    path: ~/.ssh
+    path: "{{ item }}"
     state: directory
     mode: "0700"
+  loop:
+    - ~/.ssh/
+    - ~/.ssh/keys/
 
-- name: Copy the config file
+- name: Copy file
   ansible.builtin.copy:
-    src: config
-    dest: ~/.ssh/config
-    mode: "0600"
-
-- name: Make sure the keys directory exists
-  ansible.builtin.file:
-    path: ~/.ssh/keys
-    state: directory
-    mode: "0700"
-
-- name: Copy the ssh keys files
-  ansible.builtin.copy:
-    src: "keys/{{ item }}"
-    dest: "~/.ssh/keys/{{ item }}"
+    src: "{{ item }}"
+    dest: "~/.ssh/{{ item }}"
     mode: "0600"
   loop:
-    - id_ed25519_42
-    - id_ed25519_42.pub
-    - id_ed25519_codeberg
-    - id_ed25519_codeberg.pub
-    - id_ed25519_digitalocean
-    - id_ed25519_digitalocean.pub
-    - id_ed25519_github
-    - id_ed25519_github.pub
+    - config
+    - keys/id_ed25519_42
+    - keys/id_ed25519_42.pub
+    - keys/id_ed25519_codeberg
+    - keys/id_ed25519_codeberg.pub
+    - keys/id_ed25519_digitalocean
+    - keys/id_ed25519_digitalocean.pub
+    - keys/id_ed25519_github
+    - keys/id_ed25519_github.pub
 
 # vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
