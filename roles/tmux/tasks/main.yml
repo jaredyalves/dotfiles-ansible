@@ -1,0 +1,27 @@
+---
+- name: Make sure the directory exists
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - ~/.config/tmux/
+    - ~/.config/tmux/plugins/
+    - ~/.config/tmux/themes/
+
+- name: Clone the tpm repository from github
+  ansible.builtin.git:
+    repo: git@github.com:tmux-plugins/tpm.git
+    dest: ~/.config/tmux/plugins/tpm/
+    version: v3.1.0
+
+- name: Copy the file
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: "~/.config/tmux/{{ item }}"
+    mode: "0644"
+  loop:
+    - tmux.conf
+    - themes/tokyonight-night.tmux
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
