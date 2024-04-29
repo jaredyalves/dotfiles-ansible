@@ -3,25 +3,25 @@
   ansible.builtin.file:
     path: ~/.ssh
     state: directory
-    mode: '0700'
+    mode: "0700"
 
 - name: Copy the config file
   ansible.builtin.copy:
     src: config
     dest: ~/.ssh/config
-    mode: '0600'
+    mode: "0600"
 
 - name: Make sure the keys directory exists
   ansible.builtin.file:
     path: ~/.ssh/keys
     state: directory
-    mode: '0700'
+    mode: "0700"
 
 - name: Copy the ssh keys files
   ansible.builtin.copy:
     src: "keys/{{ item }}"
     dest: "~/.ssh/keys/{{ item }}"
-    mode: '0600'
+    mode: "0600"
   loop:
     - id_ed25519_42
     - id_ed25519_42.pub

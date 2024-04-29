@@ -12,8 +12,8 @@
     mode: "0644"
 
 - name: Copy the fish_plugins file
-  ansible.builtin.template:
-    src: fish_plugins.j2
+  ansible.builtin.copy:
+    src: fish_plugins
     dest: ~/.config/fish/fish_plugins
     mode: "0644"
 
