@@ -17,6 +17,18 @@
     dest: ~/.config/fish/fish_plugins
     mode: "0644"
 
+- name: Make sure the fish/conf.d directory exists
+  ansible.builtin.file:
+    path: ~/.config/fish/conf.d
+    state: directory
+    mode: "0755"
+
+- name: Copy the conf.d/gpg-agent.fish file
+  ansible.builtin.copy:
+    src: conf.d/gpg-agent.fish
+    dest: ~/.config/fish/conf.d/gpg-agent.fish
+    mode: "0644"
+
 - name: Make sure the fish/functions directory exists
   ansible.builtin.file:
     path: ~/.config/fish/functions
