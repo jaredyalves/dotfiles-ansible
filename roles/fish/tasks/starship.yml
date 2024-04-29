@@ -1,0 +1,8 @@
+---
+- name: Copy the starship.toml file
+  ansible.builtin.copy:
+    src: starship.toml
+    dest: ~/.config/starship.toml
+    mode: "0644"
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et

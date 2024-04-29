@@ -1,0 +1,13 @@
+---
+- name: Make sure directory exists
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - ~/.config/fish/
+    - ~/.config/fish/completions/
+    - ~/.config/fish/conf.d/
+    - ~/.config/fish/functions/
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et

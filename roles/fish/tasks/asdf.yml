@@ -1,0 +1,14 @@
+---
+- name: Copy the asdf repository from github
+  ansible.builtin.git:
+    repo: git@github.com:asdf-vm/asdf.git
+    dest: ~/.asdf
+    version: v0.14.0
+
+- name: Symlink asdf.fish file
+  ansible.builtin.file:
+    src: ~/.asdf/completions/asdf.fish
+    dest: ~/.config/fish/completions/asdf.fish
+    state: link
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et

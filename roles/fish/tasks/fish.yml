@@ -1,0 +1,12 @@
+---
+- name: Copy file
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: "~/.config/fish/{{ item }}"
+    mode: "0644"
+  loop:
+    - config.fish
+    - conf.d/gpg-agent.fish
+    - conf.d/tokyonight-night.fish
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
