@@ -2,6 +2,6 @@
 - name: Copy the neovim configuration from github
   ansible.builtin.git:
     repo: "git@github.com:{{ github_user }}/nvim.git"
-    dest: "/home/{{ user }}/.config/nvim"
+    dest: ~/.config/nvim
 
 # vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
