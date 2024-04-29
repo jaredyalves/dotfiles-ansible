@@ -1,0 +1,25 @@
+Host vogsphere.42porto.com
+  HostName vogsphere.42porto.com
+  User git
+  IdentityFile ~/.ssh/keys/id_ed25519_42
+  IdentitiesOnly yes
+
+Host codeberg.com
+  HostName codeberg.com
+  User git
+  IdentityFile ~/.ssh/keys/id_ed25519_codeberg
+  IdentitiesOnly yes
+
+Host digitalocean.com
+  HostName digitalocean.com
+  User git
+  IdentityFile ~/.ssh/keys/id_ed25519_digitalocean
+  IdentitiesOnly yes
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/keys/id_ed25519_github
+  IdentitiesOnly yes
+
+# vim: ts=2 sts=2 sw=2 et
