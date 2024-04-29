@@ -16,7 +16,7 @@ pipx install ansible
 ## Usage
 
 ```bash
-ansible-playbook playbook.yml
+ansible-playbook playbook.yml --ask-vault-pass
 ```
 
 ## Contributing
