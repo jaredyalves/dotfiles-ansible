@@ -29,6 +29,12 @@
     dest: ~/.config/fish/conf.d/gpg-agent.fish
     mode: "0644"
 
+- name: Copy the conf.d/tokyonight-night.fish file
+  ansible.builtin.copy:
+    src: conf.d/tokyonight-night.fish
+    dest: ~/.config/fish/conf.d/tokyonight-night.fish
+    mode: "0644"
+
 - name: Make sure the fish/functions directory exists
   ansible.builtin.file:
     path: ~/.config/fish/functions
