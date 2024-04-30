@@ -1,12 +1,12 @@
-# dotfiles
+# Dotfiles
 
 This is a collection of my dotfiles, feel free to copy it,
 fork it, or whatever you want, but remember that there
 are a lot of personal changes that you may not like.
 
-## Installation
+## Requirements
 
-Use [ansible](https://www.ansible.com/) to install, you can get it
+Use [ansible](https://www.ansible.com/), you can get it
 from you distro package manager if available, or get it from pipx.
 
 ```bash
