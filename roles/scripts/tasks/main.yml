@@ -11,4 +11,10 @@
     dest: ~/.local/bin
     mode: "0744"
 
+- name: Copy the screensaver.sh file
+  ansible.builtin.copy:
+    src: screensaver.sh
+    dest: ~/.local/bin/
+    mode: "0744"
+
 # vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
