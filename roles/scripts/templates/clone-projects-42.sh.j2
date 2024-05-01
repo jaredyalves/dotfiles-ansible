@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+github_user="{{ github_user }}"
+dir="$HOME/projects/42"
+repos=(
+	"42cursus"
+	"42piscine"
+	"libft"
+	"minishell"
+	"philosophers"
+)
+
+mkdir -p "$dir"
+
+for repo in "${repos[@]}"; do
+	git clone "git@github.com:$github_user/$repo.git" "$dir/$repo"
+done
