@@ -8,5 +8,6 @@
     - config.fish
     - conf.d/gpg-agent.fish
     - conf.d/tokyonight-night.fish
+    - conf.d/user-paths.fish
 
 # vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
