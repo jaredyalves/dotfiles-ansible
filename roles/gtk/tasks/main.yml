@@ -1,19 +1,28 @@
 ---
-- name: Copy the gtk-2.0 file
+- name: Make sure directory exists
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - ~/.config/gtk-3.0/
+    - ~/.config/xsettingsd/
+
+- name: Copy gtkrc-2.0 file
   ansible.builtin.copy:
     src: gtkrc-2.0
     dest: ~/.gtkrc-2.0
     mode: "0644"
 
-- name: Copy the gtk-3.0 file
+- name: Copy gtk-3.0/settings.ini file
   ansible.builtin.copy:
-    src: gtk-3.0.ini
+    src: gtk-3.0/settings.ini
     dest: ~/.config/gtk-3.0/settings.ini
     mode: "0644"
 
-- name: Copy the xsettingsd file
+- name: Copy xsettingsd/xsettingsd.conf file
   ansible.builtin.copy:
-    src: xsettingsd.conf
+    src: xsettingsd/xsettingsd.conf
     dest: ~/.config/xsettingsd/xsettingsd.conf
     mode: "0644"
 
