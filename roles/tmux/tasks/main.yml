@@ -11,7 +11,7 @@
 
 - name: Clone the tpm repository from github
   ansible.builtin.git:
-    repo: git@github.com:tmux-plugins/tpm.git
+    repo: https://github.com/tmux-plugins/tpm.git
     dest: ~/.config/tmux/plugins/tpm/
     version: v3.1.0
 

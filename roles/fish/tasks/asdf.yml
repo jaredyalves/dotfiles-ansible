@@ -1,7 +1,7 @@
 ---
 - name: Copy the asdf repository from github
   ansible.builtin.git:
-    repo: git@github.com:asdf-vm/asdf.git
+    repo: https://github.com/asdf-vm/asdf.git
     dest: ~/.asdf
     version: v0.14.0
 
