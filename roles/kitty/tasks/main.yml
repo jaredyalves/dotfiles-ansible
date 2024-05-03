@@ -1,0 +1,23 @@
+---
+- name: Make sure the kitty directory exists
+  ansible.builtin.file:
+    path: ~/.config/kitty
+    state: directory
+    mode: "0755"
+
+- name: Copy file
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: "~/.config/kitty/{{ item }}"
+    mode: "0644"
+  loop:
+    - kitty.conf
+    - fonts.conf
+
+- name: Get tokyonight-night.conf from github
+  ansible.builtin.get_url:
+    url: "https://cdn.githubraw.com/folke/tokyonight.nvim/main/extras/kitty/tokyonight_night.conf"
+    dest: ~/.config/kitty/tokyonight-night.conf
+    mode: "0644"
+
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
