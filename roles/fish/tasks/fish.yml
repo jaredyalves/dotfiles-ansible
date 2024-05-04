@@ -6,6 +6,7 @@
     mode: "0644"
   loop:
     - config.fish
+    - conf.d/flatpak.fish
     - conf.d/gpg-agent.fish
     - conf.d/tokyonight-night.fish
     - conf.d/user-paths.fish
