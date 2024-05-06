@@ -1,0 +1,14 @@
+---
+- name: Make sure directory exists
+  ansible.builtin.file:
+    path: ~/.config/dunst
+    state: directory
+    mode: "0755"
+
+- name: Copy dunstrc file
+  ansible.builtin.copy:
+    src: dunstrc
+    dest: ~/.config/dunst/dunstrc
+    mode: "0644"
+
+# vim: yaml.ansible ts=2 sts=2 sw=2 et
