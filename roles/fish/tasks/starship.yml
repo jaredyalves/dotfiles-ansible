@@ -5,4 +5,11 @@
     dest: ~/.config/starship.toml
     mode: "0644"
 
+- name: Install starship
+  ansible.builtin.shell: |
+    set -e -o pipefail
+    curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin
+  args:
+    creates: ~/.local/bin/starship
+
 # vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
