@@ -1,3 +1,6 @@
+# Clear the initial message displayed when fish shell starts up
+set -g fish_greeting ""
+
 # Use neovim as the default terminal editor
 set -x EDITOR nvim
 
