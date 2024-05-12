@@ -11,4 +11,4 @@
     dest: ~/.config/dunst/dunstrc
     mode: "0644"
 
-# vim: yaml.ansible ts=2 sts=2 sw=2 et
+# vim: ft=yaml.ansible ts=2 sts=2 sw=2 et
