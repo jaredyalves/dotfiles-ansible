@@ -1,3 +1,6 @@
+# Tokyonight Night
+
+# Define color variables
 set -l foreground c0caf5
 set -l selection 283457
 set -l comment 565f89
@@ -9,6 +12,7 @@ set -l purple 9d7cd8
 set -l cyan 7dcfff
 set -l pink bb9af7
 
+# Set fish prompt colors
 set -g fish_color_normal $foreground
 set -g fish_color_command $cyan
 set -g fish_color_keyword $pink
@@ -24,6 +28,7 @@ set -g fish_color_operator $green
 set -g fish_color_escape $pink
 set -g fish_color_autosuggestion $comment
 
+# Set fish pager colors
 set -g fish_pager_color_progress $comment
 set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
